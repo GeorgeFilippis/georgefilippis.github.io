@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Georgios Filippis</title>
+<meta name="description" content="Georgios Filippis, researcher at RISE Research Institutes of Sweden, working at the intersection of urban planning, GIS, and AI." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<style>
+  :root{
+    --ink:#1c2024;
+    --muted:#5b6168;
+    --faint:#8a9099;
+    --line:#e6e8ea;
+    --bg:#ffffff;
+    --accent:#2f6b4f;      /* muted green, Grey-to-Green theme, understated */
+    --accent-soft:#eef4f0;
+    --maxw:740px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* top nav */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:saturate(180%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;gap:22px;align-items:center;height:52px;}
+  nav .brand{font-weight:600;color:var(--ink);margin-right:auto;}
+  nav a.link{color:var(--muted);font-size:14.5px;}
+  nav a.link:hover{color:var(--accent);text-decoration:none;}
+  @media(max-width:560px){nav a.link{font-size:13px;}nav .wrap{gap:14px;}}
+
+  /* header */
+  header{padding:48px 0 8px;}
+  .head{display:flex;gap:28px;align-items:center;}
+  .photo{
+    width:128px;height:128px;flex:0 0 128px;border-radius:50%;
+    object-fit:cover;background:var(--accent-soft);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--accent);font-weight:600;font-size:34px;overflow:hidden;
+  }
+  h1{font-size:30px;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em;}
+  .role{color:var(--muted);font-size:15.5px;margin:0 0 14px;}
+  .links{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .links a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;}
+  .links a:hover{color:var(--accent);text-decoration:none;}
+  .links svg{width:16px;height:16px;fill:currentColor;}
+  @media(max-width:560px){.head{flex-direction:column;text-align:center;gap:18px;}.links{justify-content:center;}}
+
+  /* sections */
+  section{padding:30px 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:0;}
+  h2{
+    font-size:13px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--faint);font-weight:600;margin:0 0 16px;
+  }
+  p{margin:0 0 14px;}
+  .lead{font-size:17px;color:var(--ink);}
+  .muted{color:var(--muted);}
+
+  /* news */
+  .news{list-style:none;margin:0;padding:0;}
+  .news li{display:flex;gap:16px;padding:9px 0;border-bottom:1px dashed var(--line);}
+  .news li:last-child{border-bottom:0;}
+  .news .date{flex:0 0 64px;color:var(--faint);font-size:13.5px;font-variant-numeric:tabular-nums;padding-top:1px;}
+  .news .what{flex:1;font-size:15px;}
+
+  /* publications */
+  .pub{padding:12px 0;border-bottom:1px solid var(--line);}
+  .pub:last-child{border-bottom:0;}
+  .pub .title{font-weight:600;color:var(--ink);}
+  .pub .meta{color:var(--muted);font-size:14px;}
+  .pub .venue{font-style:italic;}
+
+  /* placeholder badge */
+  .ph{
+    display:inline-block;background:#fff6e6;color:#9a6b00;
+    border:1px solid #f0dca8;border-radius:4px;
+    padding:0 6px;font-size:12px;font-weight:600;
+    letter-spacing:.02em;vertical-align:middle;
+  }
+
+  footer{padding:30px 0 60px;color:var(--faint);font-size:13px;text-align:center;border-top:1px solid var(--line);}
+  footer a{color:var(--faint);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Georgios Filippis</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#research">Research</a>
+    <a class="link" href="#news">News</a>
+    <a class="link" href="#publications">Publications</a>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <header>
+    <div class="head">
+      <!-- Drop a square photo at assets/georgios.jpg. Until then, initials show. -->
+      <img class="photo" src="assets/georgios.jpg" alt="Georgios Filippis"
+           onerror="this.removeAttribute('src');this.textContent='GF';" />
+      <div>
+        <h1>Georgios Filippis</h1>
+        <p class="role">Researcher, RISE Research Institutes of Sweden<br/>
+           Urban planning &amp; GIS &times; machine learning</p>
+        <div class="links">
+          <a href="mailto:georgios.filippis@ri.se" title="Email">
+            <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm10 7L4 6v.01L12 11l8-5V6l-8 5z"/></svg>
+            Email
+          </a>
+          <a href="https://github.com/georgefilippis" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            GitHub
+          </a>
+          <a href="https://scholar.google.com/citations?user=DXymmlsAAAAJ" title="Google Scholar">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.6z"/></svg>
+            Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/georgefilippis/" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10 24 14.6V24h-5v-8.3c0-2-.04-4.55-2.77-4.55-2.77 0-3.2 2.16-3.2 4.4V24h-5V8z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://ridr.se" title="RIDR research group">RIDR group</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="lead">I am a researcher at RISE Research Institutes of Sweden, part of
+       <a href="https://ridr.se">RIDR</a> and <a href="https://climateainordics.com">Climate AI Nordics</a>.
+       I apply machine learning and geospatial analysis to environmental problems, with a current focus
+       on decision-support methods for urban climate adaptation.</p>
+    <p class="muted">My work combines GIS, remote sensing, and machine learning to support
+       environmental decision-making. Recent projects span spatial decision-support for urban greening,
+       high-resolution air-quality modelling, and satellite-based monitoring of post-fire vegetation
+       recovery. I am especially interested in methods that make complex spatial trade-offs transparent
+       and defensible for planners and policymakers.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <p><strong>Grey to Green.</strong> A spatial decision-support tool that prioritises
+       urban tree planting across a city by scoring <em>where trees are needed</em> against
+       <em>where planting is feasible</em>. It couples multi-criteria decision analysis with
+       LLM- and policy-derived criterion weights, and is validated against expert planner assessments.
+       Piloted in Malmö and Uppsala.</p>
+    <p class="muted">Interests: AI for climate adaptation &amp; urban greening · multi-criteria decision
+       analysis · geospatial machine learning · air-quality and exposure modelling · remote sensing.</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><span class="date">Jun 2026</span><span class="what">Presenting the Grey to Green poster at the
+        <a href="https://climateainordics.com/events/2026-nordic-workshop">2026 Nordic Workshop on AI for Climate</a>,
+        University of Copenhagen.</span></li>
+      <li><span class="date">2025</span><span class="what">Co-authored a study on PM<sub>2.5</sub> exposure across
+        Greece, published in <em>Science of the Total Environment</em>.</span></li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="pub">
+      <div class="title">Spatiotemporal modeling of long-term PM<sub>2.5</sub> concentrations and population
+        exposure in Greece, using machine learning and statistical methods</div>
+      <div class="meta">A. Kakouri, T. Kontos, G. Grivas, <strong>G. Filippis</strong>, M.B. Korras-Carraca,
+        C. Matsoukas, A. Gkikas, E. Athanasopoulou, O. Speyer, C. Chatzidiakos, E. Gerasopoulos</div>
+      <div class="meta"><span class="venue">Science of the Total Environment</span>, vol. 958, art. 178113, 2025</div>
+      <div class="meta"><a href="https://www.sciencedirect.com/science/article/pii/S0048969724082718">article</a></div>
+    </div>
+    <p class="muted" style="margin-top:14px;">Full list on
+       <a href="https://scholar.google.com/citations?user=DXymmlsAAAAJ">Google Scholar</a>.</p>
+  </section>
+
+  <footer>
+    &copy; 2026 Georgios Filippis ·
+    Built as a static page, hosted on GitHub Pages ·
+    <a href="https://ridr.se">RIDR @ RISE</a>
+  </footer>
+
+</div>
+</body>
+</html>
